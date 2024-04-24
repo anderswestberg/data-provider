@@ -15,5 +15,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
-  "exclude": ["./dist", "./web-client", "./node_modules"]
+  "exclude": ["./dist", "./examples", "./node_modules"]
 }

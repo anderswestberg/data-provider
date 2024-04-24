@@ -12,7 +12,7 @@ const main = async () => {
         try {
             const transport = new SocketIoServer(name, undefined, port, false, [])
             const rpcServerConnection = new RpcServerConnection(name, [transport])
-            const dataProvider = new DataProvider([{ name: 'test' }])
+            const dataProvider = new DataProvider([{ name: 'posts' }, { name: 'comments' }])
             rpcServerConnection.rpcServer.manageRpc.exposeClassInstance(dataProvider, 'dataProvider')
             for (; ;) {
                 await new Promise(res => setTimeout(res, 5000))
